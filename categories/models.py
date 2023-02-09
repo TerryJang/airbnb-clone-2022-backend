@@ -4,7 +4,7 @@ from common.models import CommonModel
 
 class Category(CommonModel):
 
-    """ Room and Experience Category """
+    """Room and Experience Category"""
 
     class CategoryKindChoices(models.TextChoices):
         ROOM = "room", "Rooms"

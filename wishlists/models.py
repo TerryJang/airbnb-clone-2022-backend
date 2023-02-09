@@ -4,7 +4,8 @@ from common.models import CommonModel
 
 class Wishlist(CommonModel):
 
-    """ Wishlist Model Definition """
+    """Wishlist Model Definition"""
+
     name = models.CharField(max_length=150)
     rooms = models.ManyToManyField("rooms.Room")
     experiences = models.ManyToManyField(

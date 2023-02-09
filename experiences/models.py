@@ -16,7 +16,9 @@ class Experience(CommonModel):
     end = models.TimeField()
     description = models.TextField()
     perk = models.ManyToManyField("experiences.Perk")
-    category = models.ForeignKey("categories.Category", null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        "categories.Category", null=True, blank=True, on_delete=models.SET_NULL
+    )
 
     def __str__(self):
         return self.name
@@ -24,7 +26,7 @@ class Experience(CommonModel):
 
 class Perk(CommonModel):
 
-    """ What is included on an Experience """
+    """What is included on an Experience"""
 
     name = models.CharField(max_length=100)
     details = models.CharField(max_length=250, blank=True, default="")

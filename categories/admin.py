@@ -9,6 +9,4 @@ class CategoryAdmin(admin.ModelAdmin):
         "name",
         "kind",
     )
-    list_filter = (
-        "kind",
-    )
+    list_filter = ("kind",)
